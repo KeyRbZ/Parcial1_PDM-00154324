@@ -51,10 +51,10 @@ val menu = listOf(
     Producto(11, "Coca-Cola", 1.25, cocaImg, TipoProducto.BEBIDA)
 )
 
-val pupusaImg = "https://comedera.com/wp-content/uploads/sites/9/2023/05/Pupusas-de-quesoshutterstock_1803502444.jpg"
-val cafeImg = "https://i.blogs.es/139e0f/cafe-americano2/840_560.jpeg"
-val chocoImg = "https://cocinaconcoqui.com/wp-content/uploads/2025/12/chocolate-calientecasero-500x500.jpg"
-val cocaImg = "https://d23esi1h40dfmi.cloudfront.net/wpcontent/uploads/2025/08/01124509/00732.jpg"
+const val pupusaImg = "https://comedera.com/wp-content/uploads/sites/9/2023/05/Pupusas-de-quesoshutterstock_1803502444.jpg"
+const val cafeImg = "https://i.blogs.es/139e0f/cafe-americano2/840_560.jpeg"
+const val chocoImg = "https://cocinaconcoqui.com/wp-content/uploads/2025/12/chocolate-calientecasero-500x500.jpg"
+const val cocaImg = "https://d23esi1h40dfmi.cloudfront.net/wpcontent/uploads/2025/08/01124509/00732.jpg"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +64,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
 
 @Composable
 fun MenuPupuseria() {
@@ -83,15 +82,23 @@ fun MenuPupuseria() {
         ) {
             DropdownMenuItem(
                 text = { Text("Opcion 1") },
-                onClick = { /* Do something... */ }
+                onClick = { "Pupusa de queso" }
             )
             DropdownMenuItem(
                 text = { Text("Opcion 2") },
-                onClick = { /* Do something... */ }
+                onClick = { "Pupusa de frijol con queso" }
             )
+            DropdownMenuItem(
+                text = { Text("Opcion 3") },
+                onClick = { "Pupusa revuelta" }
+            )
+            DropdownMenuItem(
+                text = { Text("Opcion 4") },
+                onClick = { "Pupusa de frijol con queso" }
         }
     }
 }
+
 
 @Composable
 fun Boton(onClick: () -> Unit, content: @Composable () -> Unit) {
